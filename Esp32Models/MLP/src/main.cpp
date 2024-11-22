@@ -26,7 +26,8 @@ void setup() {
 }
 
 void loop() {          
-  float input[3] = {0.51428571, 0.55555556, 0.41841004};
+  // float input[3] = {0.51428571, 0.55555556, 0.41841004};
+  float input[16] = {42.242235, -83.767309, 33.000000, 32.799999, 1348.000000, 45.490196, -3.906250, -3.125000, 279.584839, 279.584839, 0.000000, 42.242183, -83.767381, 1.000000, 0.000000, 0.000000};
 
   start_time = micros();
   float predicted  = tf.predict(input);
@@ -37,7 +38,8 @@ void loop() {
   Serial.print("Predict: ");
   Serial.println(predicted);
   Serial.print("Real: ");
-  Serial.println(15.4);
+  // Serial.println(15.4);
+  Serial.println("0.0066919514033435");
   Serial.print("Processing time: ");
   Serial.println(width_time);
   Serial.println(" ");
