@@ -1,0 +1,7 @@
+FALTA:
+- Realizar uma análise de dados para verificar nos datasets o quanto as entradas estão relacionadas com a saída
+    - Utilizar diversas correlações
+
+TRABALHOS FUTUROS:
+- Verificar se outras normalizações ou sem normalização tem um resultado melhor
+- Verificar outros modelos em vez do LSTM
