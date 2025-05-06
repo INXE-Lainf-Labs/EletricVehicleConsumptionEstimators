@@ -30,11 +30,13 @@ Experimento Llama:
 	- São 3 estudos só: 
 		- 1 a 3 camadas de LSTM todas com dropout
 	- Adicionar um quarto estudo de LayerNorm
-		- LSTM - Norm - LSTM - Norm - LSTM - Norm - Dense - Dense(saída)
-		- model.add(LSTM(hidden_size, return_sequences=True, input_shape=(seq_len, input_dim)))
+		- LSTM - Norm - LSTM - Norm - LSTM - Norm - Dense - Norm - Dense(saída)
+		- model.add(LSTM(units, return_sequences=True, input_shape=(seq_len, input_dim)))	# Esquece o input shape aqui pq eu vou adicionar uma camada de entrada com ele.
 		- model.add(LayerNormalization())	# Precisa do return_sequences no LSTM para fazer a normalização
 		- model.add(tf.keras.layers.Lambda(lambda x: x[:, -1, :]))	# Sempre que usa o return_sequences no LSTM, precisa colocar essa lambda para pegar somente a última e não a janela toda
-		- model.add(Dense(output_size))
+		- model.add(Dense(units))	# Não retorna sequencias pq não é recorrente
+		- model.add(LayerNormalization())	# Não precisa do lambda após pq a entrada não foi uma sequência
+		- model.add(Dense(1))	# Camada de saída
 - Parâmetros e Intervalos:
 	- Dense: Ativação relu ou tanh
 	- LSTM não muda a ativação
