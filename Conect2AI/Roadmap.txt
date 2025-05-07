@@ -9,7 +9,7 @@ Primeiros testes
 
 
 Roadmap:
-- Comentar os códigos inteiros.
+- PAREI AQUI: Estou na Terceira Análise na parte de torque. - Comentar os códigos inteiros.
 - Experimentos Llama.
 - Valiar a feature importance para o LSTM e verificar se consigo saber quais as variáveis mais importantes.
 - Avaliar o que muda se embaralhar a ordem das trips na entrada do treinamento.
