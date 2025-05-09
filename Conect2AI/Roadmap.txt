@@ -1,4 +1,4 @@
-Primeiros testes
+Resultados Primeiros testes
 5 trials e 4 épocas:
 1) LSTM Puro: 0.00039736265898682177
 2) LSTM + dropout: 0.013068703934550285
@@ -9,14 +9,16 @@ Primeiros testes
 
 
 Roadmap:
-- PAREI AQUI: Estou na Terceira Análise na parte de torque. - Comentar os códigos inteiros.
+- Comentar os códigos inteiros - OK
 - Experimentos Llama.
-- Valiar a feature importance para o LSTM e verificar se consigo saber quais as variáveis mais importantes.
-- Avaliar o que muda se embaralhar a ordem das trips na entrada do treinamento.
-- Thommas:
-    - Pegar o dataset de combustão como Daniel
+- Experimentos Thommas:
+    - Pegar o dataset de combustão como Daniel - OK
+    - Analisar e tratar os datasets
+    - Calcular as colunas de emissões segundo as fórmulas do github
     - Usar a ideia do Thommas para treinar os modelos em cima do novo dataset (combustão) e no dataset de agora (elétrico).
     - Aplicar o EsquemaProjeto.jpeg com as features estimadas do elétrico pelo nosso modelo e verificar o erro da CO2 emissions.
+- Avaliar a feature importance para o LSTM e verificar se consigo saber quais as variáveis mais importantes.
+- Avaliar o que muda se embaralhar a ordem das trips na entrada do treinamento.
 
 
 
