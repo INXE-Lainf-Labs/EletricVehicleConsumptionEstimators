@@ -10,7 +10,7 @@ Resultados Primeiros testes
 
 Roadmap:
 - Comentar os códigos inteiros - OK
-- Experimentos Llama.
+- PAREI AQUI: Experimentos Llama. - O primeiro estudo está funcionando. Precisa criar as demais arquiteturas e testar tudo. Rodar tudo rápido e gerar um sqlite. Copiar o arquivo e abrir no dashboard local para ver se está tudo bem, depois aplicar os parâmetros do rodrigo e deixar rodando.
 - Experimentos Thommas:
     - Pegar o dataset de combustão como Daniel - OK
     - Analisar e tratar os datasets
