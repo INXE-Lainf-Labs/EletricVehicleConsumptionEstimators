@@ -10,8 +10,8 @@ Resultados Primeiros testes
 
 Roadmap:
 - Comentar os códigos inteiros - OK
-- PAREI AQUI: Experimentos Llama. - O primeiro estudo está funcionando. Precisa criar as demais arquiteturas e testar tudo. Rodar tudo rápido e gerar um sqlite. Copiar o arquivo e abrir no dashboard local para ver se está tudo bem, depois aplicar os parâmetros do rodrigo e deixar rodando.
-- Experimentos Thommas:
+- RODANDO: Experimentos Llama. - O primeiro estudo está funcionando. Precisa criar as demais arquiteturas e testar tudo. Rodar tudo rápido e gerar um sqlite. Copiar o arquivo e abrir no dashboard local para ver se está tudo bem, depois aplicar os parâmetros do rodrigo e deixar rodando.
+- PAREI AQUI: Experimentos Thommas:
     - Pegar o dataset de combustão como Daniel - OK
     - Analisar e tratar os datasets
     - Calcular as colunas de emissões segundo as fórmulas do github
@@ -27,18 +27,12 @@ Experimento Llama:
 - Trials:
 	- 100 trials
 - Epochs:
-	- 10000 com early stopping
+	- 1000 com early stopping (patience 5)
 - Arquiteturas:
 	- São 3 estudos só: 
 		- 1 a 3 camadas de LSTM todas com dropout
 	- Adicionar um quarto estudo de LayerNorm
 		- LSTM - Norm - LSTM - Norm - LSTM - Norm - Dense - Norm - Dense(saída)
-		- model.add(LSTM(units, return_sequences=True, input_shape=(seq_len, input_dim)))	# Esquece o input shape aqui pq eu vou adicionar uma camada de entrada com ele.
-		- model.add(LayerNormalization())	# Precisa do return_sequences no LSTM para fazer a normalização
-		- model.add(tf.keras.layers.Lambda(lambda x: x[:, -1, :]))	# Sempre que usa o return_sequences no LSTM, precisa colocar essa lambda para pegar somente a última e não a janela toda
-		- model.add(Dense(units))	# Não retorna sequencias pq não é recorrente
-		- model.add(LayerNormalization())	# Não precisa do lambda após pq a entrada não foi uma sequência
-		- model.add(Dense(1))	# Camada de saída
 - Parâmetros e Intervalos:
 	- Dense: Ativação relu ou tanh
 	- LSTM não muda a ativação
